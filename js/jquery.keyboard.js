@@ -836,6 +836,12 @@ $.keyboard = function(el, options){
 			.addClass('ui-keyboard ' + o.css.container + (o.alwaysOpen ? ' ui-keyboard-always-open' : '') )
 			.attr({ 'role': 'textbox' })
 			.hide();
+			
+		if (o.title){
+      			$('<div>' + o.title + '</div>')
+        			.addClass('ui-keyboard-title')
+        			.appendTo(container);
+    		}
 
 		// build preview display
 		if (o.usePreview) {
